@@ -12,12 +12,13 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
+    div.innerHTML = `<div class=" single-product  my-2 mx-3 border rounded ">
       <div>
-    <img class="product-image" src=${image}></img>
+    <img class="product-image border border-primary rounded " src=${image}></img>
       </div>
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
+      <p>Total Rate By People: ${product.rating.count}</p> <p>Average Rate: ${product.rating.rate} <i class="fas fa-star"></i></p>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
